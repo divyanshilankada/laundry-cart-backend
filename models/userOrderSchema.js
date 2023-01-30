@@ -3,15 +3,12 @@ const mongoose=require('mongoose');
 const userOrderSchema = new mongoose.Schema({
 
     order_id:{
-        type: String              
+        type: String ,
+        required:true             
     },
-    user_id:{
-        type: String,
-        required:true,
-    },
-    order_address_id:{
-        type: String,
-        required:true,
+    total_price:{
+        type:Number,
+        required:true
     },
     order_date:{
         type:Date,
@@ -28,6 +25,11 @@ const userOrderSchema = new mongoose.Schema({
     order_store_details : {
         type: new Object,
         reuqired : true
+    },
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"laudryRegister",
+        required:true
     }
     
 

@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 
 
 
-mongoose.connect("mongodb+srv://koushik:Mn1MrKr1L45@cluster0.wz0fvfe.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://lankadadivyanshi:password321@cluster1.9bovumu.mongodb.net/?retryWrites=true&w=majority");
 mongoose.connection.on('connected',()=>{
     console.log("connected to mongo");
 });
